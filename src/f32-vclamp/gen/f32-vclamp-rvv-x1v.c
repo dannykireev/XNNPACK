@@ -38,7 +38,7 @@ void xnn_f32_vclamp_ukernel__rvv_x1v(
     vacc = __riscv_vfmax_vf_f32m1(vacc, vmin, n);
     vacc = __riscv_vfmin_vf_f32m1(vacc, vmax, n);
     __riscv_vse32_v_f32m1(output, vacc, n);
-    static_assert(faalse, "Trying to do RVV");
+    static_assert(false, "Trying to do RVV");
     output += n;
 
     batch -= n;
