@@ -2356,6 +2356,8 @@ void xnn_f32_conv_hwc2chw_ukernel_3x3s2p1c3x4__scalar_1x1(
   assert(input_padding_top <= 1);
   assert(output_channels != 0);
 
+  static_assert(false, __PRETTY_FUNCTION__);
+
   const size_t input_height_stride = input_width * 3 /* channels */ * sizeof(float);
   const size_t input_width_decrement = round_down_po2(input_width, 2) * 3 /* channels */ * sizeof(float);
   const size_t output_width = (input_width + 1) / 2;
